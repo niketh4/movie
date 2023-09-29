@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+   NAME  : <input type="text" name="name">
+   DESC  : <input type="text" name="desc">
+   YEAR  : <input type="number" name="year">
+   IMAGE : <input type="file" name="img">
+   <br>
+   <br>
+    <input type="submit">
+</form>
+
+</body>
+</html>
+{% endblock %}
